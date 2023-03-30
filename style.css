@@ -60,10 +60,10 @@ ul {
   list-style: none;
 }
 
-.top ul {
+.top .mobile {
   position: absolute;
   top: 20%;
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -76,7 +76,7 @@ ul {
   padding: 50px 0 40px 0;
 }
 
-.top ul::after {
+.top .mobile::after {
   content: '';
   position: absolute;
   border-top: 20px solid transparent; 
@@ -91,7 +91,7 @@ ul {
   cursor: pointer;
 }
 
-.top ul li:last-child {
+.top .mobile li:last-child {
   padding: 15px 28px;
   color: black;
   background-color: var(--yellow);
@@ -100,6 +100,10 @@ ul {
   font-weight: 700;
   font-size: 18px;
   border-radius: 26px;
+}
+
+.top .desktop {
+  display: none;
 }
 
 header h1 {
@@ -385,11 +389,12 @@ footer .icons i:not(:nth-child(4)) {
 }
 
 @media(min-width: 900px) {
-  .menu {
+  .top .menu,
+  .top .mobile {
     display: none;
   }
 
-  .top ul {
+  .top .desktop {
     all: unset;
     list-style: none;
     color: var(--white);
@@ -398,11 +403,18 @@ footer .icons i:not(:nth-child(4)) {
     align-items: center;
   }
 
-  .top ul li:last-child {
+  .top .desktop li:last-child {
     background-color: var(--white);
+    padding: 15px 28px;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 18px;
+    border-radius: 26px;
   }
 
-  .top ul li:last-child:hover {
+  .top .desktop li:last-child:hover {
     background-color: hsl(200,94%,75%);
     color: var(--white);
     transition: .3s;
