@@ -63,7 +63,7 @@ ul {
 .top ul {
   position: absolute;
   top: 20%;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -171,6 +171,7 @@ header h1 {
   text-decoration: none;
   font-size: 1rem;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 
 .sec-2 button::after {
@@ -184,6 +185,10 @@ header h1 {
   left: 0;
   z-index: -1;
   background-color:hsl(51, 100%, 80%);
+}
+
+.sec-2 button:hover::after {
+  background-color:hsl(51, 100%, 49%);
 }
 
 .sec-3 img {
@@ -202,6 +207,10 @@ header h1 {
   left: 0;
   z-index: -1;
   background-color:hsl(7, 99%, 90%);
+}
+
+.sec-4 button:hover::after {
+  background-color:hsl(7, 99%, 70%);
 }
 
 .sec-5,
@@ -237,33 +246,122 @@ header h1 {
 
 /* testimonial */
 
-.testimonial {
+.testimonials {
   display: flex;
   flex-direction: column;
   padding: 50px 25px;
   gap: 50px;
 }
 
-.testimonial h3 {
+.testimonials h3 {
   text-transform: uppercase;
   letter-spacing: 5px;
   color:hsl(210, 4%, 67%);
   text-align: center;
 }
 
-.testimonial p,
-.testimonual .job {
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.testimonial article picture {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.testimonial article img {
+  border-radius: 50%;
+  width: 80px;
+}
+
+.testimonial article p,
+.testimonial article .job {
   font-family: 'Barlow', sans-serif;
   text-align: center;
 }
 
-.testimonial p {
+.testimonial article .name {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.testimonial article .job {
+  color:hsl(210, 4%, 67%);
+  
+}
+
+.testimonial article p {
   color:hsl(213, 9%, 39%);
   line-height: 30px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.gallery {
+  display: grid;
+  grid-template-areas: 
+        "g1 g2"
+        "g3 g4";
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery picture:nth-child(1) {
+  grid-area: g1;
+} 
+
+.gallery picture:nth-child(2) {
+  grid-area: g2;
+}
+
+.gallery picture:nth-child(3) {
+  grid-area: g3;
+}
+
+.gallery picture:nth-child(4) {
+  grid-area: g4;
+}
+
+.gallery picture img {
+  width: 100%;
+  height: 100%;
+}
+
+footer {
+  background-color:hsl(168, 34%, 70%);
+  padding: 40px 20px;
+  text-align: center;
 }
 
 footer img {
   filter: invert(76%) sepia(50%) saturate(2333%) hue-rotate(132deg) brightness(98%) contrast(88%);
+  margin-bottom: 25px;
+}
+
+footer ul {
+  display: flex;
+  gap: 40px;
+  color:hsl(168, 34%, 41%);
+  justify-content: center;
+  margin-bottom: 70px;
+}
+
+footer .icons {
+  color:hsl(167, 40%, 30%);
+}
+
+footer ul li:hover,
+footer .icons i:hover {
+  cursor: pointer;
+  color: var(--white);
+}
+
+footer .icons i:not(:nth-child(4)) {
+  margin-right: 30px;
+  font-size: 25px;
 }
 
 @media(min-width: 440px) {
@@ -353,6 +451,15 @@ footer img {
   .content .sec-6 {
     grid-area: sec-6;
   }
+
+  .testimonial {
+    flex-direction: row;
+  }
+
+  .gallery {
+    display: flex;
+    flex-direction: row;
+  }
 }
 
 @media(min-width: 1080px) {
@@ -364,6 +471,10 @@ footer img {
   .content .sec-5,
   .content .sec-6 {
     padding: 400px 80px 30px 80px;
+  }
+
+  .testimonial {
+    padding: 0px 70px 20px 70px;
   }
 }
 

@@ -9,7 +9,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
 
   <title>Frontend Mentor | Sunnyside agency landing page</title>
-
+  <script src="https://kit.fontawesome.com/9793a33acb.js" crossorigin="anonymous"></script>
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
     .attribution {
@@ -84,9 +84,13 @@
         </p>
       </section>
     </div>
-    <div class="testimonial">
+    <div class="testimonials">
       <h3>Client testimonials</h3>
-      <article>
+      <div class="testimonial">
+        <article>
+        <picture>
+          <img src="/images/image-emily.jpg" alt="">
+        </picture>
         <p>
           We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always
           hit.
@@ -95,6 +99,9 @@
         <div class="job">Marketing Director</div>
       </article>
       <article>
+        <picture>
+          <img src="/images/image-thomas.jpg" alt="">
+        </picture>
         <p>
           Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and
           enjoyable
@@ -104,12 +111,34 @@
         <div class="job">Chief Operating Officer</div>
       </article>
       <article>
+        <picture>
+          <img src="/images/image-jennie.jpg" alt="">
+        </picture>
         <p>
           Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
         </p>
         <div class="name">Jennie F.</div>
         <div class="job">Business Owner</div>
       </article>
+      </div>
+    </div>
+    <div class="gallery">
+      <picture>
+        <source media="(min-width: 900px)" srcset="/images/desktop/image-gallery-milkbottles.jpg">
+        <img src="/images/mobile/image-gallery-milkbottles.jpg" alt="">
+      </picture>
+      <picture>
+        <source media="(min-width: 900px)" srcset="/images/desktop/image-gallery-orange.jpg">
+        <img src="/images/mobile/image-gallery-orange.jpg" alt="">
+      </picture>
+      <picture>
+        <source media="(min-width: 900px)" srcset="/images/desktop/image-gallery-cone.jpg">
+        <img src="/images/mobile/image-gallery-cone.jpg" alt="">
+      </picture>
+      <picture>
+        <source media="(min-width: 900px)" srcset="/images/desktop/image-gallery-sugarcubes.jpg">
+        <img src="/images/mobile/image-gallery-sugar-cubes.jpg" alt="">
+      </picture>
     </div>
   </main>
   <footer>
@@ -119,12 +148,19 @@
       <li>Services</li>
       <li>Projects</li>
     </ul>
+    <div class="icons">
+      <i class="fa-brands fa-facebook"></i>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-twitter"></i>
+      <i class="fa-brands fa-pinterest"></i>
+    </div>
   </footer>
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="main.js"></script>
 </body>
 
 </html>
