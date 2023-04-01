@@ -11,4 +11,4 @@ function visibility () {
   }
 }
 
-menu.addEventListener('click', visibility);
+menu.addEventListener('click', visibility); 

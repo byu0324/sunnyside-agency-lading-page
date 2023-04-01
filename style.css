@@ -31,7 +31,7 @@ body {
 /* header */
 
 header {
-  background: url(/images/mobile/image-header.jpg) no-repeat;
+  background: url(images/mobile/image-header.jpg) no-repeat;
   background-size: cover;
   height: 700px;
   width: 100%;
@@ -221,7 +221,7 @@ header h1 {
 }
 
 .sec-5 {
-  background-image: url(/images/mobile/image-graphic-design.jpg);
+  background-image: url(images/mobile/image-graphic-design.jpg);
 }
 
 .content .sec-5 h2 {
@@ -233,7 +233,7 @@ header h1 {
 }
 
 .sec-6 {
-  background-image: url(/images/mobile/image-photography.jpg);
+  background-image: url(images/mobile/image-photography.jpg);
 }
 
 .content .sec-6 h2 {
@@ -366,15 +366,15 @@ footer .icons i:not(:nth-child(4)) {
 
 @media(min-width: 440px) {
   header {
-    background-image: url(/images/desktop/image-header.jpg);  
+    background-image: url(images/desktop/image-header.jpg);  
   }
 
   .content .sec-5 {
-    background-image: url(/images/desktop/image-graphic-design.jpg);
+    background-image: url(images/desktop/image-graphic-design.jpg);
   }
 
   .content .sec-6 {
-    background-image: url(/images/desktop/image-photography.jpg);
+    background-image: url(images/desktop/image-photography.jpg);
   }
 }
 
