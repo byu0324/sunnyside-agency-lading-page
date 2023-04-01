@@ -1,14 +1,12 @@
 const menu = document.querySelector('.menu');
-const visible = document.querySelector('.top .mobile');
-
-visible.style.opacity = '0';
+const visible = document.querySelector('.top ul');
 
 function visibility () {
-  if(visible.style.opacity == '0') {
-    visible.style.opacity = '01';
+  if(visible.style.display == 'none') {
+    visible.style.display = 'flex';
     menu.style.opacity = '.5';
   } else {
-    visible.style.opacity = '0';
+    visible.style.display = 'none';
     menu.style.opacity = '1';
   }
 }
